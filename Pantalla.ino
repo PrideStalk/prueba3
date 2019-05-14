@@ -40,12 +40,16 @@ void setup()   {
   Serial.begin(9600);
  
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
+  // por defecto, generaremos el alto voltaje desde la línea de 3.3v internamente! (¡ordenado!)
   display.begin(SSD1306_SWITCHCAPVCC, 0x3D);  // initialize with the I2C addr 0x3D (for the 128x64)
   // init done
   
   // Show image buffer on the display hardware.
   // Since the buffer is intialized with an Adafruit splashscreen
   // internally, this will display the splashscreen.
+  // Mostrar el buffer de imagen en el hardware de pantalla. 
+  // Dado que el búfer se inicializa con una pantalla de bienvenida de Adafruit 
+  // internamente, esto mostrará la pantalla de bienvenida.
   display.display();
   delay(2000);
  
@@ -53,10 +57,14 @@ void setup()   {
   display.clearDisplay();
  
   // draw a single pixel
+  //dibuja un solo pixel
   display.drawPixel(10, 10, WHITE);
   // Show the display buffer on the hardware.
   // NOTE: You _must_ call display after making any drawing commands
   // to make them visible on the display hardware!
+  // Mostrar el buffer de pantalla en el hardware.
+   // NOTA: Debes _must_ mostrar la pantalla después de realizar cualquier comando de dibujo
+   // para hacerlos visibles en el hardware de la pantalla!
   display.display();
   delay(2000);
   display.clearDisplay();
