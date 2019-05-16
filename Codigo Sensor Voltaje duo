@@ -1,0 +1,44 @@
+#include <Wire.h>
+int val11;
+
+int val12;
+
+double val2;
+double val1;
+
+void setup()
+
+{
+pinMode(A0,INPUT);
+pinMode(A1,INPUT);
+
+Serial.begin(9600);
+
+
+
+}
+
+void loop()
+
+{
+val11=analogRead(0);
+
+val2=val11/39.85;
+
+Serial.print("Voltage: ");
+
+Serial.println(val2,1);
+
+
+
+val12=analogRead(1);
+
+val1=val12/39.85;
+
+Serial.print("Voltage 2: ");
+
+Serial.println(val1,1);
+
+delay(5000);
+
+}
